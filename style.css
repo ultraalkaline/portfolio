@@ -21,8 +21,8 @@
 }
 
 @keyframes slideAndFade {
-    0% {margin-top: -2em; opacity: 0;}
-    100% {margin-top: 0; opacity: 1;}
+    from {top: -2em; opacity: 0;}
+    to {top: 0; opacity: 1;}
 }
 
 html, body {
@@ -35,14 +35,12 @@ html, body {
 
 #menu-bar {
     position: relative;
-    display: none;
+    display: inline-block;
     float: right;
     margin: 0;
     padding: 2em 1em 1em 2em;
     z-index: 1;
-
-    animation-name: slideAndFade;
-    animation-duration: 200ms;
+    animation: slideAndFade 500ms;
 }
 
 #menu-bar li {

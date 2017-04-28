@@ -19,10 +19,10 @@ var current;
 var mazeWidth = 125;
 var mazeHeight = 125;
 
-var strokeweight = 3;
+var strokeweight = 4;
 
 function setup() {
-    mazeCanvas = createCanvas(mazeWidth, mazeHeight);
+    mazeCanvas = createCanvas(mazeWidth + 2, mazeHeight + 2);
     mazeCanvas.id('mazeCanvas');
     frameRate(framerate);
 
