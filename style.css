@@ -17,12 +17,12 @@
 
 @font-face {
     font-family: headerFont;
-    src: url(font/CourierNew.ttf);
+    src: url(font/ProggyClean.ttf);
 }
 
 @keyframes slideAndFade {
-    from {}
-    to {}
+    0% {margin-top: -2em; opacity: 0;}
+    100% {margin-top: 0; opacity: 1;}
 }
 
 html, body {
@@ -40,6 +40,9 @@ html, body {
     margin: 0;
     padding: 2em 1em 1em 2em;
     z-index: 1;
+
+    animation-name: slideAndFade;
+    animation-duration: 200ms;
 }
 
 #menu-bar li {
@@ -188,6 +191,6 @@ html, body {
 
 #typing-indicator {
     color: #00DB19;
-
+    font-family: textFont;
     transition: opacity 100ms ease;
 }

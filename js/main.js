@@ -1,10 +1,9 @@
 $(window).on('load', function() {
-    $("#menu-bar").fadeIn(200);
     $("#mazeCanvas").attr('title', 'generate a new maze.');
     $("#mazeCanvas").prependTo('#title-container');
     $("#mazeCanvas").mouseenter();
 
-    var title = "jovan polus.";
+    var title = 'jovan polus.';
     var description = 'software developer, computer enthusiast and a human.'
     var i = 0;
     var letter;
