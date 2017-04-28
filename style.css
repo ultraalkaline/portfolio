@@ -1,0 +1,193 @@
+/* NOTE
+
+   Menu non-selected color: #d5d5d5
+   Menu selected color: #00DB19
+
+*/
+
+@font-face {
+    font-family: menuFont;
+    src: url(font/DejaVuSansMono.ttf);
+}
+
+@font-face {
+    font-family: textFont;
+    src: url(font/DroidSansMono.ttf);
+}
+
+@font-face {
+    font-family: headerFont;
+    src: url(font/CourierNew.ttf);
+}
+
+@keyframes slideAndFade {
+    from {}
+    to {}
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    font-size: 0.85em;
+}
+
+#menu-bar {
+    position: relative;
+    display: none;
+    float: right;
+    margin: 0;
+    padding: 2em 1em 1em 2em;
+    z-index: 1;
+}
+
+#menu-bar li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    z-index: 1;
+}
+
+#menu-bar .menu-bar-separator {
+    font-family: textFont;
+    font-size: 2em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: #d5d5d5;
+}
+
+#menu-bar a {
+    font-family: menuFont;
+    font-size: 2em;
+    color: #d5d5d5;
+    text-decoration: none;
+    display: block;
+    margin: 0;
+    white-space: nowrap;
+
+    transition: color 200ms ease;
+}
+
+#menu-bar .dropdown a {
+    margin-bottom: 0.5em;
+}
+
+#menu-bar .inner {
+    margin: 1em 0;
+}
+
+#menu-bar .inner a {
+    font-size: 1.5em;
+}
+
+#menu-bar .active a {
+    color: #00DB19;
+}
+
+#menu-bar li:not(.active):hover > a {
+    color: #85d48e;
+}
+
+#menu-bar li:hover > ul {
+    top: 2.5em;
+    opacity: 1;
+    visibility: visible;
+}
+
+#menu-bar ul {
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 200ms ease, top 200ms ease;
+}
+
+#menu-bar ul li {
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#mazeCanvas {
+    position: relative;
+    clear: both;
+    top: 0;
+    left: 50%;
+    margin: 0;
+    opacity: 1;
+    cursor: pointer;
+    transform: translateX(-50%) rotate(0deg);
+    transform-origin: center;
+
+    transition: opacity 200ms ease, transform 200ms ease;
+}
+
+#mazeCanvas:hover {
+    opacity: 0.6;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+#title-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    padding: 0;
+    margin: 0 auto;
+    width: auto;
+    height: 17em;
+    transform: translateY(-50%);
+}
+
+#title-text-container {
+    position: relative;
+    width: auto;
+    float: none;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#title-header {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    font-family: headerFont;
+    font-size: 2.5em;
+    white-space: nowrap;
+    color: #FFF;
+    text-align: center;
+}
+
+#title-description {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    top: 0.5em;
+    width: auto;
+    font-family: headerFont;
+    font-size: 1.2em;
+    white-space: nowrap;
+    color: #d3d3d3;
+}
+
+#typing-indicator {
+    color: #00DB19;
+
+    transition: opacity 100ms ease;
+}
