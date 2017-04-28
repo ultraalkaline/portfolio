@@ -20,9 +20,19 @@
     src: url(font/ProggyClean.ttf);
 }
 
+@font-face {
+    font-family: descFont;
+    src: url(font/CourierNew.ttf);
+}
+
 @keyframes slideAndFade {
     from {top: -2em; opacity: 0;}
     to {top: 0; opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 html, body {
@@ -181,10 +191,12 @@ html, body {
     margin: 0;
     top: 0.5em;
     width: auto;
-    font-family: headerFont;
+    font-family: descFont;
     font-size: 1.2em;
     white-space: nowrap;
     color: #d3d3d3;
+    font-style: italic;
+    text-transform: uppercase;
 }
 
 #typing-indicator {

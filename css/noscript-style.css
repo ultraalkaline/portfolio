@@ -20,3 +20,22 @@
 #menu-bar li:hover > ul {
     display: block;
 }
+
+#title-container {
+    display: block;
+
+    animation: fadeIn 1000ms;
+}
+
+
+#title-header:after {
+  content: 'jovan polus.';
+}
+
+#title-description:after {
+  content: 'software developer, computer enthusiast and a human.';
+}
+
+#typing-indicator {
+  display: none;
+}
