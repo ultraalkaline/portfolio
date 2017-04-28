@@ -201,5 +201,6 @@ html, body {
 #typing-indicator {
     color: #00DB19;
     font-family: textFont;
+    font-style: normal;
     transition: opacity 100ms ease;
 }
