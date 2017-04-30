@@ -43,11 +43,11 @@
     </head>
     <body>
         <ul id="menu-bar">
-            <li class="active"><a href="#">home</a></li>
+            <li class="active"><a id="home-anchor" role="button" class="menu-item">home</a></li>
             <li class="menu-bar-separator">&frasl;</li>
-            <li><a href="#">about</a></li>
+            <li><a id="about-anchor" role="button" class="menu-item">about</a></li>
             <li class="menu-bar-separator">&frasl;</li>
-            <li class="dropdown"><a href="#">projects</a>
+            <li class="dropdown"><a id="projects-anchor" role="button" class="menu-item">projects</a>
                 <ul>
                     <li class="inner"><a href="https://ultraalkaline.github.io/retardation101">retardation101</a></li>
                     <li class="inner"><a href="https://ultraalkaline.github.io/p5solarsystem">oursolarsystem</a></li>
@@ -55,15 +55,26 @@
                 </ul>
             </li>
             <li class="menu-bar-separator">&frasl;</li>
-            <li><a href="#">contact</a></li>
+            <li><a id="contact-anchor" role="button" class="menu-item">contact</a></li>
         </ul>
 
-        <div id="title-container">
+        <div id="home-container" class="slide slide-active">
             <div id="title-text-container">
                 <h2 id="title-header"><span id="typing-indicator">|</span></h2>
                 <h3 id="title-description"></h3>
             </div>
+        </div>
 
+        <div id="about-container" class="slide">
+            <h1 class="slide-indicator">about slide</h1>
+        </div>
+
+        <div id="projects-container" class="slide">
+            <h1 class="slide-indicator">projects slide</h1>
+        </div>
+
+        <div id="contact-container" class="slide">
+            <h1 class="slide-indicator">contact slide</h1>
         </div>
     </body>
 </html>

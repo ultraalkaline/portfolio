@@ -1,7 +1,7 @@
 /* NOTE
 
-   Menu non-selected color: #d5d5d5
-   Menu selected color: #00DB19
+    Menu non-selected color: #d5d5d5
+    Menu selected color: #00DB19
 
 */
 
@@ -33,6 +33,15 @@
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+*:not(.selectable) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 html, body {
@@ -78,6 +87,7 @@ html, body {
     display: block;
     margin: 0;
     white-space: nowrap;
+    cursor: pointer;
 
     transition: color 200ms ease;
 }
@@ -127,7 +137,34 @@ html, body {
     padding: 0;
 }
 
+.slide:not(.slide-active) {
+    opacity: 0;
+}
 
+.slide {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    padding: 0;
+    margin: 0 auto;
+    width: auto;
+    transform: translateY(-50%);
+
+    transition: opacity 200ms ease;
+}
+
+.slide-active {
+    opacity: 1;
+}
+
+.slide-indicator {
+    position: relative;
+    color: #FFF;
+    font-family: headerFont;
+    font-size: 2em;
+    text-align: center;
+}
 
 #mazeCanvas {
     position: relative;
@@ -148,16 +185,8 @@ html, body {
     transform: translateX(-50%) rotate(90deg);
 }
 
-#title-container {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    padding: 0;
-    margin: 0 auto;
-    width: auto;
+#home-container {
     height: 17em;
-    transform: translateY(-50%);
 }
 
 #title-text-container {

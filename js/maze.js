@@ -163,6 +163,8 @@ function Cell(col, row, color) {
     }
 
     this.show = function() {
+        background(0, 0, 0, 0);
+        
         var x = this.col * scl;
         var y = this.row * scl;
         if (this.color[3] != undefined) {
@@ -170,6 +172,7 @@ function Cell(col, row, color) {
         } else {
             stroke(this.color[0], this.color[1], this.color[2], 255);
         }
+
         strokeWeight(strokeweight);
 
         if (this.walls[0]) {

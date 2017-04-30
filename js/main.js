@@ -1,10 +1,19 @@
 $(window).on('load', function() {
+
+    var $slides = $('.slide');
+
     $("#mazeCanvas").attr('title', 'generate a new maze.');
-    $("#mazeCanvas").prependTo('#title-container');
+    $("#mazeCanvas").prependTo('#home-container');
     $("#mazeCanvas").mouseenter();
 
+    $(".menu-item").click(function() {
+        var slideID = $(this).attr('id');
+        var slideName = slideID.substr(0, slideID.length - 7);
+        showSlide(slideName);
+    });
+
     var title = 'jovan polus.';
-    var description = 'software developer, computer enthusiast and a human.'
+    var description = 'software developer, computer enthusiast and a human.';
     var i = 0;
     var letter;
     var typingDone = false;
@@ -44,14 +53,16 @@ $(window).on('load', function() {
                     typingDone = true;
                 }
             }, delay);
-
     }
 
-    function rotateAnim(degrees, element) {
+    function showSlide(slideName) {
         // cache the element for performance reasons.
-        var $elem = $(element);
-        $elem.css('transition', 'transform 200ms ease');
-        $elem.css('transform', 'rotate(' + degrees + 'deg)');
+        var $slide = $('#' + slideName + '-container');
+
+        if (!$slide.hasClass('slide-active')) {
+            $slides.removeClass('slide-active');
+            $slide.addClass('slide-active');
+        }
     }
 
 });

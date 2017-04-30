@@ -29,13 +29,13 @@
 
 
 #title-header:after {
-  content: 'jovan polus.';
+    content: 'jovan polus.';
 }
 
 #title-description:after {
-  content: 'software developer, computer enthusiast and a human.';
+    content: 'software developer, computer enthusiast and a human.';
 }
 
 #typing-indicator {
-  display: none;
+    display: none;
 }
