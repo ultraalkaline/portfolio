@@ -1,6 +1,7 @@
 $(window).on('load', function() {
 
     var $slides = $('.slide');
+    var $slideAnchors = $('.menu-item').parent().not('.inner');
 
     $("#mazeCanvas").attr('title', 'generate a new maze.');
     $("#mazeCanvas").prependTo('#home-container');
@@ -56,12 +57,16 @@ $(window).on('load', function() {
     }
 
     function showSlide(slideName) {
-        // cache the element for performance reasons.
+        // cache the elements for performance reasons.
         var $slide = $('#' + slideName + '-container');
+        var $slideItem = $('#' + slideName + '-anchor').parent().not('.inner');
 
         if (!$slide.hasClass('slide-active')) {
             $slides.removeClass('slide-active');
+            $slideAnchors.removeClass('active');
+
             $slide.addClass('slide-active');
+            $slideItem.addClass('active');
         }
     }
 

@@ -96,20 +96,23 @@ html, body {
     margin-bottom: 0.5em;
 }
 
+
+#menu-bar .active a {
+    color: #00DB19;
+}
+
 #menu-bar .inner {
     margin: 1em 0;
 }
 
 #menu-bar .inner a {
     font-size: 1.5em;
+    color: #d5d5d5 !important;
 }
 
-#menu-bar .active a {
-    color: #00DB19;
-}
 
 #menu-bar li:not(.active):hover > a {
-    color: #85d48e;
+    color: #85d48e !important;
 }
 
 #menu-bar li:hover > ul {
