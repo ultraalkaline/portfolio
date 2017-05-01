@@ -50,6 +50,7 @@ html, body {
     width: 100%;
     height: auto;
     font-size: 0.85em;
+
 }
 
 #menu-bar {
@@ -89,7 +90,7 @@ html, body {
     white-space: nowrap;
     cursor: pointer;
 
-    transition: color 200ms ease;
+    transition: color 200ms ease-in;
 }
 
 #menu-bar .dropdown a {
@@ -106,7 +107,7 @@ html, body {
 }
 
 #menu-bar .inner a {
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #d5d5d5 !important;
 }
 
@@ -141,7 +142,7 @@ html, body {
 }
 
 .slide:not(.slide-active) {
-    opacity: 0;
+    display: none;
 }
 
 .slide {
@@ -158,7 +159,7 @@ html, body {
 }
 
 .slide-active {
-    opacity: 1;
+    display: block;
 }
 
 .slide-indicator {

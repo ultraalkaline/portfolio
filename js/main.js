@@ -37,23 +37,23 @@ $(window).on('load', function() {
         } else {
             $("#typing-indicator").css('opacity', '0');
         }
-    }, 500);
+    }, 1000);
 
 
     function typeAnim(text, element, delay) {
         $("#typing-indicator").prependTo(element);
-            var interval = setInterval(function() {
-                letter = text.charAt(i);
-                if (i != text.length) {
-                    $("#typing-indicator").before(letter);
-                    i++;
-                    typingDone = false;
-                } else {
-                    clearInterval(interval);
-                    i = 0;
-                    typingDone = true;
-                }
-            }, delay);
+        var interval = setInterval(function() {
+            letter = text.charAt(i);
+            if (i != text.length) {
+                $("#typing-indicator").before(letter);
+                i++;
+                typingDone = false;
+            } else {
+                clearInterval(interval);
+                i = 0;
+                typingDone = true;
+            }
+        }, delay);
     }
 
     function showSlide(slideName) {
