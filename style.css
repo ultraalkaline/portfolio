@@ -164,10 +164,19 @@ html, body {
 
 .slide-indicator {
     position: relative;
-    color: #FFF;
+    text-align: center;
+}
+
+.slide-indicator:first-child {
     font-family: headerFont;
     font-size: 2em;
-    text-align: center;
+    color: #FFF;
+}
+.slide-indicator:nth-child(2) {
+    font-family: textFont;
+    font-size: 1em;
+    font-style: italic;
+    color: #d5d5d5;
 }
 
 #mazeCanvas {
@@ -225,7 +234,7 @@ html, body {
     width: auto;
     font-family: descFont;
     font-size: 1.2em;
-    white-space: nowrap;
+    white-space: normal;
     color: #d3d3d3;
     font-style: italic;
     text-transform: uppercase;
